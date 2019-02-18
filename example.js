@@ -4,7 +4,7 @@ const { range } = require("./");
 const params = {
   iterations: range(10, 30, 10),
   objective: "binaryCrossentropy",
-  dropout: range(0.4, 0.6, 0.1)
+  dropout: range(0.45, 0.65, 0.1)
 };
 
 const search = gridSearch(params);

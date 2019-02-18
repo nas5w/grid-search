@@ -45,7 +45,7 @@ function decimalPlaces(n) {
 
 function range(start, finish, step = 1) {
   let arr = [];
-  const decimals = decimalPlaces(step);
+  const decimals = Math.max(decimalPlaces(start), decimalPlaces(step));
   for (let i = start; i <= finish; i += step) {
     i = Math.round(i * Math.pow(10, decimals)) / Math.pow(10, decimals);
     arr.push(i);
