@@ -1,4 +1,11 @@
-# Grid Search
+<p align="center">
+  <img alt="Grid Search Icon" src="https://i.imgur.com/T8zWHlr.png" />
+</p>
+<p align="center">
+  <img alt="Grid Search" src="https://i.imgur.com/jNszrLE.png" />
+</p>
+
+[![Build Status](https://travis-ci.org/nas5w/grid-search.svg?branch=master)](https://travis-ci.org/nas5w/grid-search) [![Codecov Status](https://codecov.io/gh/nas5w/grid-search/branch/master/graph/badge.svg)](https://codecov.io/gh/nas5w/grid-search/branch/master)
 
 `grid-search` is a small, simple node module that can be used to generate an array of parameters to use during a machine learning grid search. It will generate every possible combination of parameters based on user input.
 

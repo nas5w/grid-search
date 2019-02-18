@@ -4,7 +4,7 @@
   "description": "Create an array of variables to search through",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "grid-search",
@@ -15,5 +15,12 @@
     "data-science"
   ],
   "author": "Nick Scialli",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.1.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
 }
