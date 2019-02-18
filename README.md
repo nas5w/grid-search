@@ -11,6 +11,14 @@
 
 This package additionally ships with a small `range` method that can be used to generate a range of values between two numbers.
 
+# Installation
+
+Install `grid-search` using npm.
+
+```bash
+npm i grid-search
+```
+
 # Example Use
 
 ## Basic grid search parameter generation
