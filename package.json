@@ -1,6 +1,6 @@
 {
   "name": "grid-search",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create an array of variables to search through",
   "main": "index.js",
   "scripts": {
