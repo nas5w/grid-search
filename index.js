@@ -22,13 +22,35 @@ function gridSearch(vars) {
     return r;
   }
 
-  return cartesian(...all);
+  let permutations = cartesian(...all);
+  let final = [];
+  permutations.forEach(permutation => {
+    final.push(permutation.reduce((r, c) => ({ ...r, ...c }), {}));
+  });
+
+  return final;
 }
 
-let vars = {
-  one: [0.8, 0.9],
-  two: ["Nick", "blink"],
-  three: [1, 2, 3]
-};
+function decimalPlaces(n) {
+  var s = "" + +n;
+  var match = /(?:\.(\d+))?(?:[eE]([+\-]?\d+))?$/.exec(s);
+  if (!match) {
+    return 0;
+  }
+  return Math.max(
+    0,
+    (match[1] == "0" ? 0 : (match[1] || "").length) - (match[2] || 0) // fraction length
+  );
+}
 
-console.log(gridSearch(vars));
+function range(start, finish, step = 1) {
+  let arr = [];
+  const decimals = decimalPlaces(step);
+  for (let i = start; i <= finish; i += step) {
+    i = Math.round(i * Math.pow(10, decimals)) / Math.pow(10, decimals);
+    arr.push(i);
+  }
+  return arr;
+}
+
+module.exports = { gridSearch, range };
